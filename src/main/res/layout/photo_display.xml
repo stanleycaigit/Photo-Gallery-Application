@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+        <ImageView
+            android:id="@+id/photoView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="45dp"
+                android:text="&lt;"
+                android:id="@+id/previousPhotoButton"/>
+            
+            <Button
+                android:id="@+id/deletePhotoButton"
+                android:layout_width="155dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="45dp"
+                android:text="Delete photo"/>
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:text="&gt;"
+                android:id="@+id/nextPhotoButton" />
+        </LinearLayout>
+        
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/tagControl">
+
+            <ListView
+                android:layout_width="140dp"
+                android:layout_height="150dp"
+                android:layout_marginRight="5dp"
+                android:background="#eeeeee"
+                android:choiceMode="singleChoice"
+                android:listSelector="@android:color/darker_gray"
+                android:id="@+id/tagListView" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/addAndDeleteTags">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:layout_width="125dp"
+                        android:layout_height="50dp"
+                        android:entries="@array/tag_keys"
+                        android:id="@+id/tagKeySpinner"/>
+
+                    <EditText
+                        android:layout_width="95dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_height="50dp"
+                        android:inputType="text"
+                        android:id="@+id/tagValueInput"/>
+                    
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="50dp"
+                    android:text="Add tag"
+                    android:id="@+id/addTagButton"/>
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="50dp"
+                    android:text="Delete selected tag"
+                    android:id="@+id/deleteTagButton"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:orientation="horizontal"
+            android:id="@+id/movePhotoControl">
+            <EditText
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="7dp"
+                android:inputType="text"
+                android:id="@+id/albumNameInput"/>
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:text="Move photo to"
+                android:id="@+id/movePhotoButton"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:layout_marginBottom="5dp"
+            android:choiceMode="singleChoice"
+            android:listSelector="@android:color/darker_gray"
+            android:background="#eeeeee"
+            android:id="@+id/albumListView"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="115dp"
+                android:layout_marginRight="7dp"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                 android:id="@+id/newAlbumInput"/>
+            <Button
+                android:layout_width="245dp"
+                android:layout_height="wrap_content"
+                android:text="Create new album"
+                android:id="@+id/createNewAlbumButton"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <EditText
+                android:layout_width="240dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="7dp"
+                android:inputType="text"
+                android:id="@+id/searchInput"/>
+            <Button
+                android:layout_width="120dp"
+                android:layout_height="45dp"
+                android:text="Search"
+                android:id="@+id/searchButton"/>
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="250dp"
+            android:text="Tag format: &quot;[Tag key]&quot;=&quot;[Tag value]&quot;" />
+    </LinearLayout>
+</ScrollView>
+
